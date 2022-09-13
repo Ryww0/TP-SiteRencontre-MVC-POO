@@ -2,7 +2,7 @@
 
 namespace App\model;
 
-class Sport
+class sport
 {
     private string $id;
     private string $name;
