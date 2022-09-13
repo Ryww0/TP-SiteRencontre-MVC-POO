@@ -1,12 +1,19 @@
 <?php
 
-require_once ('Config/config.php');
+require_once 'Autoloader.php';
+require_once 'config/config.php';
 
-require_once ('./App/Model/sport.php');
-require_once ('./App/Controller/homeController.php');
-
+use App\Autoloader;
 use App\Controller\HomeController;
-use App\model\sport;
 
-$test = new HomeController();
-var_dump($test->invoke());
+Autoloader::$folderList =
+    [
+        "App/Model/",
+        "App/Controller/",
+        "App/Repository/",
+        "App/Service/",
+    ];
+Autoloader::register();
+
+$homeController = new HomeController();
+var_dump($homeController->invoke());

@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-require ('App/Repository/SportRepository.php');
 use App\model\sport;
 use App\Repository\SportRepository;
 
@@ -12,5 +11,10 @@ class HomeController
     {
         $repo = new SportRepository();
         return $repo->findAll();
+    }
+
+    public function add($sport)
+    {
+
     }
 }

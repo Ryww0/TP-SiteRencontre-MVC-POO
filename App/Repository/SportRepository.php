@@ -2,9 +2,6 @@
 
 namespace App\Repository;
 
-require ('App/Repository/ISportRepository.php');
-require ('App/Service/Database.php');
-
 use App\Model\Sport;
 use App\Service\Database;
 use PDO;
